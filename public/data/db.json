@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Murat Zenkin",
+      "age": "30",
+      "country": "Düsseldorf"
+    },
+    {
+      "id": 2,
+      "username": "Elif Yılmaz",
+      "age": "25",
+      "country": "İstanbul"
+    },
+    {
+      "id": 3,
+      "username": "Ahmet Demir",
+      "age": "28",
+      "country": "Ankara"
+    },
+    {
+      "id": 4,
+      "username": "Ayşe Kaya",
+      "age": "22",
+      "country": "Bursa"
+    },
+    {
+      "id": 5,
+      "username": "Mehmet Çelik",
+      "age": "35",
+      "country": "Izmir"
+    },
+    {
+      "id": 6,
+      "username": "Zeynep Akman",
+      "age": "27",
+      "country": "Antalya"
+    },
+    {
+      "id": 7,
+      "username": "Oğuzhan Tekin",
+      "age": "32",
+      "country": "Sakarya"
+    },
+    {
+      "id": 8,
+      "username": "Seda Aslan",
+      "age": "29",
+      "country": "Kocaeli"
+    },
+    {
+      "id": 9,
+      "username": "Burak Yalçın",
+      "age": "26",
+      "country": "Trabzon"
+    },
+    {
+      "id": 10,
+      "username": "Merve Sönmez",
+      "age": "24",
+      "country": "Konya"
+    },
+    {
+      "id": 11,
+      "username": "Ali Vural",
+      "age": "31",
+      "country": "Kayseri"
+    },
+    {
+      "id": 12,
+      "username": "Ceren Yurt",
+      "age": "23",
+      "country": "Gaziantep"
+    },
+    {
+      "id": 13,
+      "username": "Deniz Erdem",
+      "age": "34",
+      "country": "Samsun"
+    },
+    {
+      "id": 14,
+      "username": "Hüseyin Duman",
+      "age": "36",
+      "country": "Aydın"
+    },
+    {
+      "id": 15,
+      "username": "Gizem Korkmaz",
+      "age": "28",
+      "country": "Eskişehir"
+    },
+    {
+      "id": 16,
+      "username": "Canan Acar",
+      "age": "22",
+      "country": "Diyarbakır"
+    }
+  ]
+}

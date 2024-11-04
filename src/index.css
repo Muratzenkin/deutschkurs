@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative; /* Pozisyon ayarı */
+}
+
+.scroll-wrapper {
+  display: flex;
+  animation: slide 40s linear infinite; /* Animasyon süresi */
+}
+
+.scroll-item {
+  display: inline-block;
+  white-space: normal;
+  margin-right: 2rem; /* Aralarındaki boşluk */
+}
