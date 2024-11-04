@@ -6,24 +6,8 @@ function Willkommen() {
   const navigate = useNavigate();
   const courseSectionRef = useRef(null);
 
-  // Anmelden butonu yönlendirmesi
   const handleRegister = () => {
-    navigate("/login"); // Anmelden sayfasına yönlendirme
-  };
-
-  // Incele butonuyla aşağı kaydırma
-  const handleScroll = () => {
-    // Eğer courseSectionRef öğesi mevcutsa:
-    if (courseSectionRef.current) {
-      // Referans öğesinin sayfanın üst kısmından uzaklığını alıyoruz:
-      const sectionPosition = courseSectionRef.current.offsetTop;
-
-      // window.scrollTo ile ek bir kaydırma mesafesi ekliyoruz (örneğin, +200px):
-      window.scrollTo({
-        top: sectionPosition + 800, // İstediğiniz kadar ekleyebilirsiniz
-        behavior: "smooth",
-      });
-    }
+    navigate("/login");
   };
 
   const words = [
@@ -82,13 +66,6 @@ function Willkommen() {
           onClick={handleRegister}
         >
           Anmelden
-        </button>
-
-        <button
-          className="mt-4 text-[#FFECB3] font-semibold py-1 px-4 rounded-full border border-[#FFECB3] hover:bg-[#FFECB3] hover:text-[#1E88E5] transition duration-300 ease-in-out"
-          onClick={handleScroll}
-        >
-          Mehr !
         </button>
       </div>
 

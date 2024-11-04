@@ -4,9 +4,8 @@ type NewsResult = {
   title: string;
   description: string;
   link: string;
-  error: string;
 };
-export const fetchNews = async (category) => {
+export const fetchNews = async () => {
   try {
     const response = await fetch(
       `${BASE_URL}/1/latest?&apikey=${API_KEY}&country=tr`
