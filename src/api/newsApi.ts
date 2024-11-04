@@ -5,7 +5,7 @@ type NewsResult = {
   description: string;
   link: string;
 };
-export const fetchNews = async () => {
+export const fetchNews = async (category: string): Promise<NewsResult[]> => {
   try {
     const response = await fetch(
       `${BASE_URL}/1/latest?&apikey=${API_KEY}&country=tr`
@@ -16,6 +16,7 @@ export const fetchNews = async () => {
     const data = await response.json();
 
     return data.results as NewsResult[];
+    console.log(category);
   } catch (error) {
     throw new Error(
       `An error occurred while fetching news. ${(error as Error).message}`

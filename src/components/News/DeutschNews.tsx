@@ -4,6 +4,7 @@ import { useNewsStore } from "../../zustand/store";
 
 const DeutschNews: React.FC = () => {
   const category = useNewsStore((state) => state.category);
+  console.log(category);
   const {
     data: news,
     error,
