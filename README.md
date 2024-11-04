@@ -1,54 +1,46 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# Deutschkurs WebSite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologien :
 
-Currently, two official plugins are available:
+- ##### TypeScript :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bietet eine zuverlässigere und besser lesbare Codestruktur. Es erleichtert die Fehlersuche, insbesondere bei der Arbeit mit unterschiedlichen Datenstrukturen.
 
-## Expanding the ESLint configuration
+- ##### Tailwind :
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Es beschleunigt den Designprozess und ermöglicht es Ihnen, eine elegante Oberfläche zu erstellen, ohne dass Sie viel CSS schreiben müssen.
 
-- Configure the top-level `parserOptions` property like this:
+- ##### Zustand :
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Ein kleines und einfaches Toll für das globale Statemanagement.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- ##### TanStack Query :
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Datenabruf und Caching
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-=======
-# deutschkurs
->>>>>>> 570dbcdf808d844c09ef9f3a62773385b935b698
+## Seiten und Featurestruktur :
+
+- ##### Startseite (Home)
+
+  - Informationen über den Kurs.
+  - Benutzerregistierung und Anmeldung.
+  - Kommentare der Teilnehmer
+  - Untermenüs
+
+    - Login
+    - Studenten-Panel
+      - Anwesenheit in der Klasse
+      - Zuweisungen und Rückmeldungen
+    - Hausaufgaben-Upload
+
+      - Vorlesungsunterlagen
+      - Videos
+      - Audioaufnahmen
+
+    - Auflistung von Aufgaben
+    - Tools zur Verbesserung des Sprachniveaus
+      - Quiz
+      - Wortspiele
+      - Grammatiktest
+    - Zoom-Integration
+    - Kontakt und Ankündigungen
