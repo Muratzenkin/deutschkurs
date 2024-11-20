@@ -1,57 +1,54 @@
-import { useLanguageStore, useThemeStore } from "../../zustand/store";
+import { useThemeStore } from "../../zustand/store";
 import Dropdown from "./navbar/Dropdown";
 import Language from "./navbar/Language";
 import ToggleTheme from "./navbar/ToggleTheme";
 import LoginButton from "./navbar/LoginButton";
 import Nav from "./navbar/Nav";
-
-const translations = {
-  tr: {
-    name: "Almanca Kursu",
-  },
-  de: {
-    name: "Deutschkurs",
-  },
-};
+import Logo from "../../../public/image/logo.jpeg";
+import { NavLink } from "react-router-dom";
 
 function Header() {
-  const { language } = useLanguageStore();
   const { theme } = useThemeStore();
 
   return (
-    <div>
+    <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 ${
           theme === "dark"
             ? "bg-gradient-to-r from-gray-800 to-gray-900"
-            : "bg-gradient-to-r from-blue-400 to-blue-600"
-        } text-white p-5 shadow-xl transition-colors duration-300 ease-in-out`}
+            : "bg-gradient-to-r from-blue-400/80 to-blue-600/80"
+        } text-white p-1 backdrop-blur-sm rounded-full mt-3 shadow-xl transition-colors duration-300 ease-in-out`}
       >
-        <div className="container mx-auto flex justify-between items-center">
-          <div>
-            <h1 className="text-2xl font-extrabold tracking-tight md:text-3xl">
-              {translations[language].name}
-            </h1>
-          </div>
+        <nav className="container mx-auto flex flex-wrap justify-between items-center  rounded-full py-3 px-4 mt-2">
+          <NavLink to="/">
+            <div>
+              <img
+                src={Logo}
+                alt="logo"
+                className="max-w-[80px] rounded-full"
+              />
+            </div>
+          </NavLink>
 
           <div className="hidden md:flex">
             <Nav />
           </div>
           {/* Mobil  */}
 
-          <div className="flex space-x-3 items-center">
+          <div className="flex  items-center">
             <div className="md:hidden flex items-center">
               <Dropdown />
             </div>
             <ToggleTheme />
 
             <Language />
-
-            <LoginButton />
+            <div className="border border-white px-4 py-2 rounded-full">
+              <LoginButton />
+            </div>
           </div>
-        </div>
+        </nav>
       </header>
-    </div>
+    </>
   );
 }
 

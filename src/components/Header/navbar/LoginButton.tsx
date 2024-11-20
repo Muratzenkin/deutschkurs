@@ -22,7 +22,7 @@ function LoginButton() {
       {" "}
       <button
         onClick={handleLoginRedirect}
-        className="hover:bg-blue-700 transition duration-300 ease-in-out rounded-full px-3 py-1"
+        className=" text-white hover:bg-white hover:text-blue-500 cursor-pointer transition duration-300 ease-in-out rounded-full px-3 py-1"
       >
         {translations[language].login}
       </button>

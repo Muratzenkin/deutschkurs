@@ -48,11 +48,7 @@ function Account() {
   ];
 
   return (
-    <div
-      className={`py-16 ${
-        theme === "dark" ? "bg-gray-800" : "bg-white"
-      } transition-colors duration-300`}
-    >
+    <div>
       <div className="container mx-auto px-4">
         <h2
           className={`text-3xl font-bold text-center mb-12 ${

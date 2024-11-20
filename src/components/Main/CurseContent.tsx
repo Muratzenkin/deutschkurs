@@ -1,123 +1,96 @@
-import { BookOpenCheck, Clock, Router } from "lucide-react";
-import { useThemeStore } from "../../zustand/store";
-
 function CourseContent() {
-  const { theme } = useThemeStore();
-
   const courses = [
     {
       level: "A1-A2",
       description:
-        "Einführung in die deutsche Sprache, grundlegende Grammatik und Wortschatz.",
+        "Einführung in die deutsche Sprache, grundlegende Grammatik und Wortschatz. Dieser Kurs ist ideal für Anfänger, die eine solide Grundlage in der deutschen Sprache aufbauen möchten.",
+      details:
+        "Schwerpunkte: Begrüßungen, grundlegende Phrasen, tägliche Kommunikation und einfache grammatikalische Strukturen.",
     },
     {
       level: "B1-B2",
       description:
-        "Selbstständige Kommunikation, Verständnis komplexer Texte und Diskussionen.",
+        "Selbstständige Kommunikation, Verständnis komplexer Texte und Diskussionen. Entwickeln Sie Ihre Sprachfähigkeiten für Alltag und Beruf.",
+      details:
+        "Schwerpunkte: Fortgeschrittene Grammatik, schriftliche Kommunikation und mündlicher Ausdruck.",
     },
   ];
 
   const teachers = [
     {
       name: "Hatice Nur Zenkin",
-      photo: "../public/image/frau.png",
-      expertise: "Deutsch als Fremdsprache, A1-B1",
+      photo: "/image/frau.png", // Add the correct path for your project
+      expertise: "Deutsch als Fremdsprache (A1-B1)",
       feedback:
-        "Ich liebe es, mit meinen Schülern zu arbeiten und ihre Fortschritte zu sehen.",
+        "Ich liebe es, mit meinen Schülern zu arbeiten und ihre Fortschritte zu sehen. Jedes Lächeln eines Schülers ist für mich eine Belohnung.",
     },
     {
       name: "Jörg Rauen",
-      photo: "../public/image/mann.png",
+      photo: "/image/mann.png", // Add the correct path for your project
       expertise: "Wirtschaftsdeutsch, B1-C1",
-      feedback: "Meine Erfahrung mit Business-Deutsch-Kursen ist großartig.",
+      feedback:
+        "Meine Erfahrung mit Business-Deutsch-Kursen hat gezeigt, wie wichtig Sprache im Berufsleben ist. Es bereitet mir Freude, Wissen weiterzugeben.",
     },
   ];
 
   return (
-    <div
-      className={`${
-        theme === "dark"
-          ? "bg-gray-800 text-white"
-          : "bg-gradient-to-b from-indigo-100 via-purple-100 to-pink-100 text-gray-800"
-      } p-8 rounded-lg shadow-lg pt-[150px]`}
-    >
-      <h2 className="text-3xl font-extrabold text-indigo-700 mb-6 text-center tracking-wide">
-        Kursangebote
+    <div className="py-12 bg-indigo-50 px-6 lg:px-20">
+      {/* Başlık */}
+      <h2 className="text-4xl font-extrabold text-indigo-700 mb-10 text-center">
+        Kursangebote und Lehrer
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <ul className="space-y-4">
-          {courses.map((course, index) => (
-            <li
-              key={index}
-              className={`${
-                theme === "dark" ? "bg-gray-800 " : "bg-white "
-              }  p-6 rounded-lg shadow-lg border border-gray-300 transition-transform transform hover:scale-105`}
-            >
-              <h3 className="font-semibold text-indigo-600 text-xl">
-                Niveau: {course.level}
-              </h3>
-              <p className="text-gray-700 mt-2">{course.description}</p>
-            </li>
-          ))}
-        </ul>
+      {/* İçerik */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Kurslar */}
+        <div>
+          <h3 className="text-2xl font-semibold text-indigo-600 mb-6">
+            Unsere Kurse
+          </h3>
+          <div className="space-y-8">
+            {courses.map((course, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200"
+              >
+                <h4 className="text-xl font-semibold text-indigo-700">
+                  Niveau: {course.level}
+                </h4>
+                <p className="text-gray-700 mt-3">{course.description}</p>
+                <p className="text-gray-500 mt-2 italic">{course.details}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
-        <div className="space-y-4">
-          {teachers.map((teacher, index) => (
-            <div
-              key={index}
-              className={`${
-                theme === "dark" ? "bg-gray-800 " : "bg-white "
-              } p-6 rounded-lg shadow-lg border border-gray-300 flex flex-col items-center transition-transform transform hover:scale-105`}
-            >
-              <img
-                src={teacher.photo}
-                alt={teacher.name}
-                className="w-24 h-24 rounded-full mb-4 border-2 border-indigo-500"
-              />
-              <h3 className="font-semibold text-indigo-600 text-lg">
-                {teacher.name}
-              </h3>
-              <p className="text-gray-600 text-sm mt-1">{teacher.expertise}</p>
-              <p className="text-gray-700 mt-3 italic text-center">
-                "{teacher.feedback}"
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <h2 className="text-3xl font-extrabold text-indigo-700 mt-8 mb-6 text-center tracking-wide">
-        Kursmerkmale
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div
-          className={`flex flex-col items-center ${
-            theme === "dark" ? "bg-gray-800 " : "bg-white "
-          } p-6 rounded-lg shadow-lg border border-gray-300 transition-transform transform hover:scale-105`}
-        >
-          <Router className="text-indigo-500 w-8 h-8 mb-2" />
-          <p className="text-gray-700 text-center">
-            Online oder Präsenzunterricht
-          </p>
-        </div>
-        <div
-          className={`flex flex-col items-center ${
-            theme === "dark" ? "bg-gray-800 " : "bg-white "
-          } p-6 rounded-lg shadow-lg border border-gray-300 transition-transform transform hover:scale-105`}
-        >
-          <BookOpenCheck className="text-indigo-500 w-8 h-8 mb-2" />
-          <p className="text-gray-700 text-center">Wöchentliche Programme</p>
-        </div>
-        <div
-          className={`flex flex-col items-center ${
-            theme === "dark" ? "bg-gray-800 " : "bg-white "
-          } p-6 rounded-lg shadow-lg border border-gray-300 transition-transform transform hover:scale-105`}
-        >
-          <Clock className="text-indigo-500 w-8 h-8 mb-2" />
-          <p className="text-gray-700 text-center">
-            Flexible Unterrichtszeiten
-          </p>
+        {/* Öğretmenler */}
+        <div>
+          <h3 className="text-2xl font-semibold text-indigo-600 mb-6">
+            Unsere Lehrer
+          </h3>
+          <div className="space-y-8">
+            {teachers.map((teacher, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 flex flex-col items-center"
+              >
+                <img
+                  src={teacher.photo}
+                  alt={teacher.name}
+                  className="w-24 h-24 rounded-full mb-4 border-2 border-indigo-500"
+                />
+                <h4 className="text-lg font-semibold text-indigo-700">
+                  {teacher.name}
+                </h4>
+                <p className="text-gray-500 mt-1 text-sm">
+                  {teacher.expertise}
+                </p>
+                <p className="text-gray-600 mt-4 italic text-center">
+                  "{teacher.feedback}"
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

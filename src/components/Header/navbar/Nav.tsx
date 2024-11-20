@@ -8,26 +8,26 @@ function Nav() {
     <nav
       className={`${
         theme === "dark" ? "bg-gray-800" : "bg-blue-500"
-      } text-white p-5 shadow-xl transition-colors duration-300 ease-in-out`}
+      } container text-white p-5 shadow-xl transition-colors duration-300 ease-in-out`}
     >
       <div className="container lg:max-w-screen-xl mx-auto flex justify-between items-center">
-        <div className={"hidden md:flex items-center space-x-6 "}>
-          <NavLink to="/" className="text-white hover:text-gray-300">
+        <ul className={"flex items-center gap-4 uppercase"}>
+          <NavLink to="/" className=" hover:text-gray-300">
             Home
           </NavLink>
-          <NavLink to="/privacy" className="text-white hover:text-gray-300">
+          <NavLink to="/privacy" className="hover:text-gray-300">
             Datenschutz
           </NavLink>
-          <NavLink to="/blog" className="text-white hover:text-gray-300">
+          <NavLink to="/blog" className="hover:text-gray-300">
             Blog
           </NavLink>
-          <NavLink to="/news" className="text-white hover:text-gray-300">
+          <NavLink to="/news" className=" hover:text-gray-300">
             News
           </NavLink>
-          <NavLink to="/contact" className="text-white hover:text-gray-300">
+          <NavLink to="/contact" className="hover:text-gray-300">
             Contact
           </NavLink>
-        </div>
+        </ul>
       </div>
     </nav>
   );
