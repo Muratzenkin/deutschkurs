@@ -26,7 +26,7 @@ function Willkommen() {
   return (
     <div className="relative flex flex-col items-center w-full h-screen bg-[#E0F2F1]">
       <motion.img
-        src="/image/back.jpg"
+        src="/image/deutschh.avif"
         alt="willkommen"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}

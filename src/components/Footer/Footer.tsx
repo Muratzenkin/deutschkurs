@@ -25,7 +25,9 @@ function Footer() {
   return (
     <footer
       className={`${
-        theme === "dark" ? "bg-gray-900" : "bg-gray-700"
+        theme === "dark"
+          ? "bg-gray-900"
+          : "bg-gradient-to-r from-blue-400/80 to-blue-600/80"
       } text-white py-10 shadow-lg transition-colors duration-300 ease-in-out`}
     >
       {/* Footer Grid */}
@@ -145,7 +147,9 @@ function Footer() {
       {/* Footer Bottom */}
       <div
         className={`${
-          theme === "dark" ? "bg-gray-800" : "bg-gray-800"
+          theme === "dark"
+            ? "bg-gray-800"
+            : "bg-gradient-to-r from-blue-400/80 to-blue-600/80"
         } text-center py-4 mt-8`}
       >
         <p>&copy; {translations[language].footer}</p>
