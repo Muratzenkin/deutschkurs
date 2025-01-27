@@ -11,7 +11,7 @@ const DeutschNewsApp: React.FC = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 mt-16">
         <h1 className="text-2xl font-bold mb-4">News App</h1>
 
         <select

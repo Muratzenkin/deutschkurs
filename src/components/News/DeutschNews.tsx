@@ -28,7 +28,19 @@ const DeutschNews: React.FC = () => {
     );
 
   if (error instanceof Error)
-    return <p className="mt-16 text-red-500">Error: {error.message}</p>;
+    return (
+      <div className="mt-16 text-center">
+        <img
+          src="/image/error.jpg"
+          alt="Error"
+          className="mx-auto w-1/2 rounded shadow-md"
+        />
+        <p className="text-gray-600 mt-4 text-lg">
+          We are currently working on bringing you the latest news. Please check
+          back soon!
+        </p>
+      </div>
+    );
 
   return (
     <div className="mt-16">

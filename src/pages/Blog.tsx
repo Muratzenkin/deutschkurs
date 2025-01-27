@@ -34,7 +34,7 @@ function Blog() {
       <Outlet />
       <div className="relative flex items-center justify-center h-screen w-screen overflow-hidden">
         <motion.img
-          src="../public/image/willkommen.jpg"
+          src="/image/willkommen.jpg"
           alt="willkommen"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
