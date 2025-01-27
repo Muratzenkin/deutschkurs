@@ -1,4 +1,8 @@
+import { useThemeStore } from "../../zustand/store";
+
 function CourseContent() {
+  const { theme } = useThemeStore();
+
   const courses = [
     {
       level: "A1-A2",
@@ -34,7 +38,13 @@ function CourseContent() {
   ];
 
   return (
-    <div className="py-12 bg-indigo-50 px-6 lg:px-20">
+    <div
+      className={`py-12 bg-indigo-50 px-6 lg:px-20 ${
+        theme === "dark"
+          ? "bg-gradient-to-r from-gray-800 to-gray-900"
+          : "bg-indigo-50"
+      }`}
+    >
       {/* Başlık */}
       <h2 className="text-4xl font-extrabold text-indigo-700 mb-10 text-center">
         Kursangebote und Lehrer
